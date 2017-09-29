@@ -21,7 +21,7 @@ if [ "$ssh_key" != "" ]; then
 	ln -s "$1/.ssh" "$HOME/.ssh"
 	
 	
-	chmod o+w "$HOME/.ssh/id_rsa"
+	chmod u+w "$HOME/.ssh/id_rsa"
 	echo "$HOME/.ssh/id_rsa"
 	echo `ls -l $HOME/.ssh/`
 	echo `whoami`
