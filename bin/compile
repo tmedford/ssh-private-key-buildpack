@@ -25,10 +25,12 @@ if [ "$ssh_key" != "" ]; then
 	echo `ls -l $HOME/.ssh/`
 	echo "$ssh_key" | base64 --decode > "$HOME/.ssh/id_rsa"
 	echo testing
-	IFS=',' read -ra HOST <<< "$ssh_hosts"
-	for i in "${HOST[@]}"; do
-		ssh -oStrictHostKeyChecking=no -T $i 2>&1 | indent
-	done
+	
+	
+# 	IFS=',' read -ra HOST <<< "$ssh_hosts"
+# 	for i in "${HOST[@]}"; do
+# 		ssh -oStrictHostKeyChecking=no -T $i 2>&1 | indent
+# 	done
 
 	exit 0
 else
