@@ -20,6 +20,8 @@ if [ "$ssh_key" != "" ]; then
 	mkdir "$1/.ssh"
 	ln -s "$1/.ssh" "$HOME/.ssh"
 	
+	
+	chmod o+w "$HOME/.ssh/id_rsa"
 	echo "$HOME/.ssh/id_rsa"
 	echo `ls -l $HOME/.ssh/`
 	echo `whoami`
