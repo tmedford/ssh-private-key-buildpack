@@ -22,11 +22,9 @@ if [ "$ssh_key" != "" ]; then
 	
 	
 	chmod u+w "$HOME/.ssh/id_rsa"
-	echo "$HOME/.ssh/id_rsa"
 	echo `ls -l $HOME/.ssh/`
-	echo `whoami`
 	echo "$ssh_key" | base64 --decode > "$HOME/.ssh/id_rsa"
-
+	echo testing
 	IFS=',' read -ra HOST <<< "$ssh_hosts"
 	for i in "${HOST[@]}"; do
 		ssh -oStrictHostKeyChecking=no -T $i 2>&1 | indent
