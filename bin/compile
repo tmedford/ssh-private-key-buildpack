@@ -24,7 +24,7 @@ if [ "$ssh_key" != "" ]; then
 	chmod u+w "$HOME/.ssh/id_rsa"
 	echo `ls -l $HOME/.ssh/`
 	#echo "$ssh_key" | base64 --decode > "$HOME/.ssh/id_rsa"
-	echo testing
+	echo testing2
 	
 	
 # 	IFS=',' read -ra HOST <<< "$ssh_hosts"
